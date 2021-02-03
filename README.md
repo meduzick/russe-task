@@ -38,3 +38,6 @@
 1. TF graph is optimized for inference (no gradient calculation nodes and operation + lower precision calculation)
 2. Can be even more optimized (frozen graph)
 3. Separate graphs and session are used for training and evaluation
+
+# Options:
+1. Inferene process can be wrapped inside the docker container, if this would be desirable property. 
