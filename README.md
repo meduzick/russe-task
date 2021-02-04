@@ -29,6 +29,7 @@
 2. You can preprocess data from scratch and feed this for inference in the notebook solution.py in the last section again inside project directory
 3. Do not forget install dependencies from requirements.txt file with simple pip install -r requirements.txt
 4. Pretrained elmo model can donwloaded inside working directory from the notebook with wget command and appropriate link
+5. Link to model: http://vectors.nlpl.eu/repository/20/199.zip
 
 # Obvious drawbacks:
 1. Model is overfitted on the dev set (if it is supposed to be used in other processes as ready project)
