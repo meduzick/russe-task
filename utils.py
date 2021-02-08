@@ -63,6 +63,24 @@ def calculate_positions(lexemmes, corpus, analyzer):
 def _calculate_q_n_contexts(corpus,
                             positions,
                             elmo_vectors):
+    '''
+    =============================================================
+    Calculates embeddings vectors for queries and contexts.
+        1. Queries: vectorizes sequence, find position of target 
+        lemma and extract corresponding vector.
+        2. Contexts: aggregates vectors in fixed-length 
+        bidirectional window around target lemma, summs up and
+        normalizes
+    Args:
+      corpus (list): list of lists of strings
+      positions (list): list of integers
+      elmo_vectors (np.array): 3d tensors - embedded sequences 
+    Returns:
+      queries (np.array): embedded target lemmas
+      contexts (np.array): normalized embeddings of target lemma
+        contexts
+    =============================================================
+    '''
     queries = []
     contexts = []
     window_size = 5
