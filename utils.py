@@ -34,16 +34,14 @@ def _approximate_position(sentence, lexem):
 def calculate_positions(lexemmes, corpus, analyzer):
     '''
     =============================================================
-    Takes in lemmas and lemmatized corpus. Returns sentences,
-    positions of the lemmas in the sentences and target.
+    Takes in lemmas and lemmatized corpus. Returns positions of
+    the lemmas in the sentences.
     Args:
       lexemmes (list): list of lexemmes
       corpus (list): list of lists of strings
       analyzer (maru analyzer): instance of maru analyzer
-      original_seqs (list): list of strings
-      or_positions (list): list of strings
     Returns:
-      positions
+      positions (list): list of integers
     =============================================================
     '''
     positions = []
@@ -183,6 +181,7 @@ def deval(train_model,
       dev_sess (tf Session): instance of tf Session
       dev_iterator (generator):input data subgrah
       num_dev_steps (int): number of steps to process whole dataset (dev)
+      test (pd.DataFrame): original dev dataframe
     ===========================================================================
     '''
     predictions = []
